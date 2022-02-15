@@ -6,6 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>title</title>
+
+    <!-- CSS基础 -->
+        <!-- css基础认识 -->
+            <!-- css一般卸载head中的style标签下 -->
+                <!-- 内嵌式css 写在head中 -->
+                    <!-- 小案例 一般不用 -->
+                <!-- 外联式css 写在单独的css文件中 -->
+                    <link rel="stylesheet" href="./mycss.css">
+                    <!-- 经常用在真正项目中 -->
+                <!-- 行内式css 写在标签的style属性中 -->
+                    <!-- 搭配js使用 -->
+            <style>
+                /* 一个选择器 跟一个大标签 */
+                /* p 这里的意思是查找p标签 */
+                p {
+                    color: red;
+                    font-size: 30px;
+                    background-color: greenyellow;
+                    width: 400px;
+                    height: 400px;
+                }
+                img{
+                    text-align: center;
+
+                }
+                
+                /* 类选择器例子 */
+                .one{
+                    color: aqua;
+                    
+                }
+                .size{
+                    font-size: 66px;
+                }
+                /* id选择器例子 */
+                #id{
+                    color: blue;
+                }
+                /* img标签需要父标签进行包裹 */
+                #img{
+                    text-align: center;
+                }
+
+
+
+
+            </style>
+        <!-- 基础选择器 -->
+            <!-- 标签选择器 -->
+                <!-- 标签名搭配大括号 -->
+            <!-- 类选择器 -->
+                <!-- 通过类名,找到页面中所有带有这个类名的标签,设置样式 -->
+            <!-- id选择器 -->
+                <!-- 一般是配合js来使用,并不是为了css而存在的 -->
+                <!-- id选择器在是unique的 -->
+
+            <!-- 通配符选择器 -->
+                <!-- * 搭配大括号 通常用于清除所有的默认样式 -->
+                <!--    清除margin和padding -->
+        <!-- 字体和文本样式 -->
+            <!-- font-size
+                font-weight
+                font-style
+                font-family -->
+            <!-- 文本样式 -->
+            <!-- 文本缩进 text-indent 单位em 缩进两个字符 text-indent: 2em;
+                 内容(文本/图片)水平对其方式: text-align: right/center
+                 文本修饰: text-decoration:
+                    underline/line-through/overline/none -->
+            <!-- line-height 行高 控制两行文字之间(上间距到 下间距, 中间是文本高度的)的距离 size/line-height-->
+
+        <!-- Chrome调试工具 -->
+                
+        <!-- 综合案例 -->
+
+    
 </head>
 
 <body>
@@ -13,8 +89,10 @@
         <!-- cmd + / to make comment -->
         <!-- 大部分是双标签，如<br> <hr>位单标签 -->
         <!-- 标题标签 <h1 - h6> 独占-->
-            <h1>一个标题</h1>
-            <h2>this is a h2 title</h2>
+            <!-- css 行内式 -->
+            <h1 style="color: red;">一个标题</h1>
+            <h2 class="one size">this is a h2 title</h2>
+            <h3 id="id">test id </h3>
             <!-- 段落标签 <p> 独占-->
             <p>一段文字</p>
             <!-- 换行 -->
@@ -38,7 +116,9 @@
     <!-- 媒体标签 -->
         <!-- 图片标签 -->
         <!-- <img src="图片路径" alt="替换文本" title="鼠标悬停时的提示文本" width="只设置一个会等比例缩放" height=""> -->
-            <img src="./imgtest.jpeg" alt="图片不现实时显示此段文字" title="鼠标悬停" width="500">
+            <img src="./imgtest.jpeg" alt="图片不现实时显示此段文字" title="鼠标悬停" width="500" id="img">
+
+            <div id="img"><img src="./imgtest.jpeg" alt="图片不现实时显示此段文字" title="鼠标悬停" width="500"></div>
 
     <!-- 路径 -->
 
